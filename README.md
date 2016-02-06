@@ -4,13 +4,19 @@
 
 This section explains how to use scripts that are intended to ease the development of this project.
 
-Compile and run program.
+Build the project like Jenkins.
+
+```sh
+./build.sh
+```
+
+Build and run the project.
 
 ```sh
 ./build.sh --run
 ```
 
-Remove compiled program.
+Remove the compiled program.
 
 ```sh
 clean.sh
