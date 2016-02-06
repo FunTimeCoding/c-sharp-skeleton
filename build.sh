@@ -1,5 +1,6 @@
 #!/bin/sh -e
 
+./run-style-check.sh --ci-mode
 ./clean.sh
 clear
 mkdir -p build/css
