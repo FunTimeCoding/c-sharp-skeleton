@@ -1,2 +1,9 @@
 build
 tmp
+.vagrant
+debian/files
+debian/debhelper-build-stamp
+debian/c-sharp-skeleton
+debian/c-sharp-skeleton.substvars
+documentation/man/*.1
+.scannerwork

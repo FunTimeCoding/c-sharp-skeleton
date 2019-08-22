@@ -1,46 +1,70 @@
 # CSharpSkeleton
 
-## Usage
+## Setup
 
-This section explains how to use this project.
+This section explains how to install and uninstall the project.
 
-Run the main entry point program.
+Install project dependencies.
 
 ```sh
-# TODO: Explain how to run this project.
+script/setup.sh
+```
+
+
+## Usage
+
+This section explains how to use the project.
+
+Run the main program.
+
+```sh
+bin/css
 ```
 
 
 ## Development
 
-This section explains how to use scripts that are intended to ease the development of this project.
+This section explains how to improve the project.
 
-Install development tools.
+Configure Git on Windows before cloning. This avoids problems with Vagrant and VirtualBox.
 
 ```sh
-# TODO: Explain how to install tools required for the development of this project.
+git config --global core.autocrlf input
 ```
 
-Run style check and show all concerns.
+Create the development virtual machine on Linux and Darwin.
 
 ```sh
-./run-style-check.sh
+script/vagrant/create.sh
 ```
 
-Build the project like Jenkins.
+Create the development virtual machine on Windows.
 
-```sh
-./build.sh
+```bat
+script\vagrant\create.bat
 ```
 
-Build and run the project.
+Run style check and metrics.
 
 ```sh
-./build.sh --run
+script/check.sh [--help]
+script/measure.sh [--help]
 ```
 
-Remove the compiled program.
+Build project.
 
 ```sh
-clean.sh
+script/build.sh
+```
+
+Install Debian package.
+
+```sh
+sudo dpkg --install build/c-sharp-skeleton_0.1.0-1_all.deb
+```
+
+Show files the package installed.
+
+```sh
+dpkg-query --listfiles c-sharp-skeleton
 ```
